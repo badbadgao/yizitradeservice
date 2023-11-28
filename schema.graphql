@@ -1,0 +1,19 @@
+type Product {
+  id: String
+  name: String
+  description: String
+  qualityInStock: Int
+  currentPrice: Float
+  originalPrice: Float
+  discountOff: Int
+  priceUnit: String
+  soldQty: Int
+  special: Boolean
+}
+
+# The "Query" type is special: it lists all of the available queries that
+# clients can execute, along with the return type for each. In this
+# case, the "Products" query returns an array of zero or more Products (defined above).
+type Query {
+  products: [Product]
+}
