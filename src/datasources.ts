@@ -2,7 +2,7 @@
 // for type safety in our data source class
 import { Product } from "./__generated__/resolvers-types";
 
-const ProductsDB: Omit<Required<Product>, "__typename">[] = [
+const ProductsDB: Omit<Product, "__typename">[] = [
   {
     name: "Garlic",
     qualityInStock: 1200,

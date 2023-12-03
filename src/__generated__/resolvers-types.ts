@@ -17,21 +17,21 @@ export type Scalars = {
 
 export type Product = {
   __typename?: 'Product';
-  currentPrice?: Maybe<Scalars['Float']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
+  currentPrice: Scalars['Float']['output'];
+  description: Scalars['String']['output'];
   discountOff?: Maybe<Scalars['Int']['output']>;
-  id?: Maybe<Scalars['String']['output']>;
-  name?: Maybe<Scalars['String']['output']>;
-  originalPrice?: Maybe<Scalars['Float']['output']>;
-  priceUnit?: Maybe<Scalars['String']['output']>;
-  qualityInStock?: Maybe<Scalars['Int']['output']>;
-  soldQty?: Maybe<Scalars['Int']['output']>;
+  id: Scalars['String']['output'];
+  name: Scalars['String']['output'];
+  originalPrice: Scalars['Float']['output'];
+  priceUnit: Scalars['String']['output'];
+  qualityInStock: Scalars['Int']['output'];
+  soldQty: Scalars['Int']['output'];
   special?: Maybe<Scalars['Boolean']['output']>;
 };
 
 export type Query = {
   __typename?: 'Query';
-  products?: Maybe<Array<Maybe<Product>>>;
+  products?: Maybe<Array<Product>>;
 };
 
 export type WithIndex<TObject> = TObject & Record<string, any>;
@@ -125,21 +125,21 @@ export type ResolversParentTypes = ResolversObject<{
 }>;
 
 export type ProductResolvers<ContextType = any, ParentType extends ResolversParentTypes['Product'] = ResolversParentTypes['Product']> = ResolversObject<{
-  currentPrice?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
-  description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  currentPrice?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+  description?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   discountOff?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  id?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  originalPrice?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
-  priceUnit?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  qualityInStock?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
-  soldQty?: Resolver<Maybe<ResolversTypes['Int']>, ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  originalPrice?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+  priceUnit?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  qualityInStock?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  soldQty?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   special?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
-  products?: Resolver<Maybe<Array<Maybe<ResolversTypes['Product']>>>, ParentType, ContextType>;
+  products?: Resolver<Maybe<Array<ResolversTypes['Product']>>, ParentType, ContextType>;
 }>;
 
 export type Resolvers<ContextType = any> = ResolversObject<{
